@@ -1,272 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Amazon </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="designing.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-made Amazon homepage recreation using HTML and CSS.">
+  <title>Amazon | Online Shopping</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="designing.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div id="logo" class="navbar_items"> </div>
-
-            <div id="id1" class="navbar_items">
-                <p id="id2">deliver to</p>
-                <div id="id3">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <select id='id4' name="location">
-                        <option>India</option>
-                        <option>Sri Lanka</option>
-                        <option>Pakistan</option>
-                        <option>Afganisthan</option>
-                        <option>Iraq</option>
-                        <option>Palisthan</option>
-                        <option>Bangladesh</option>
-                        <option>Afganisthan</option>
-                        <option>Indonesia</option>
-                        <option>America</option>
-                        <option>Japan</option>
-                        <option>China</option>
-                        <option>Spain</option>
-                        <option>France</option>
-                    </select>
-                </div>
-            </div>
-
-            <div id="id5" class="navbar_items">
-                <select id="id6">
-                    <option>All</option>
-                </select>
-                <input id="id7" type="text" placeholder="Search Amazon" >
-                <i id="id8" class="fa-solid fa-magnifying-glass"></i>
-            </div>
-
-            <div id="id9" class="navbar_items">
-                <p id="id10">Language</p>
-                <div id="id11">
-                    <i class="fa-solid fa-flag-usa"></i>
-                    <select id="id12">
-                        <option>English</option>
-                        <option>Telugu</option>
-                        <option>Urdu</option>
-                        <option>Hindi</option>
-                        <option>Tamil</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="navbar_items">
-                <p id="id13">Hello, sign in</p>
-                <select id="id14">
-                    <option>Accounts & Lists</option>
-                </select>
-            </div>
-
-            <div class="navbar_items">
-                <p id="id15">Returns</p>
-                <p id="id16">& Orders</p>
-            </div>
-
-            <div class="navbar_items" id="id17">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <p id="1d18">Cart</p>
-            </div>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a id="logo" class="navbar_items" href="#top" aria-label="Amazon home"></a>
+      <div id="id1" class="navbar_items delivery">
+        <p id="id2">Deliver to</p>
+        <div id="id3"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <select id="id4" name="location" aria-label="Delivery country">
+            <option>India</option><option>Sri Lanka</option><option>Pakistan</option><option>Afghanistan</option><option>Iraq</option><option>Palestine</option><option>Bangladesh</option><option>Indonesia</option><option>America</option><option>Japan</option><option>China</option><option>Spain</option><option>France</option>
+          </select>
         </div>
-
-        <div class="secondnavbar">
-            <div id="id19"><i class="fa-solid fa-bars"></i></div>
-            <div> <p id="id20" class="navbar_items">All</p> </div>
-            <div id="id21">
-                <p class="seconditems navbar_items">Today's Deals</p>
-                <p class="seconditems navbar_items">Costumer Service</p>
-                <p class="seconditems navbar_items">Registry</p>
-                <p class="seconditems navbar_items">Gift Cards</p>
-                <p class="seconditems navbar_items">Sell</p>
-            </div>
-            <div><p class="navbar_items">Shop Deals in Electronics</p></div>
+      </div>
+      <form id="id5" class="navbar_items search" role="search" action="#">
+        <label class="sr-only" for="id6">Search category</label>
+        <select id="id6" aria-label="Search category"><option>All</option><option>Electronics</option><option>Fashion</option><option>Home</option></select>
+        <label class="sr-only" for="id7">Search Amazon</label>
+        <input id="id7" type="search" placeholder="Search Amazon" autocomplete="off">
+        <button id="id8" type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+      </form>
+      <div id="id9" class="navbar_items language">
+        <p id="id10">Language</p><div id="id11"><i class="fa-solid fa-globe" aria-hidden="true"></i>
+          <select id="id12" aria-label="Choose language"><option>English</option><option>Telugu</option><option>Urdu</option><option>Hindi</option><option>Tamil</option></select>
         </div>
-    </header>
+      </div>
+      <div class="navbar_items account"><p id="id13">Hello, sign in</p><select id="id14" aria-label="Account menu"><option>Accounts &amp; Lists</option></select></div>
+      <a class="navbar_items orders" href="#footer"><span id="id15">Returns</span><strong id="id16">&amp; Orders</strong></a>
+      <a class="navbar_items cart" id="id17" href="#cart"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i><span id="1d18">Cart</span></a>
+    </nav>
+    <nav class="secondnavbar" aria-label="Shopping categories">
+      <a id="id19" href="#categories"><i class="fa-solid fa-bars" aria-hidden="true"></i> <span>All</span></a>
+      <div id="id21" class="secondary-links"><a class="seconditems navbar_items" href="#deals">Today's Deals</a><a class="seconditems navbar_items" href="#help">Customer Service</a><a class="seconditems navbar_items" href="#registry">Registry</a><a class="seconditems navbar_items" href="#gift-cards">Gift Cards</a><a class="seconditems navbar_items" href="#sell">Sell</a></div>
+      <a class="electronics-link navbar_items" href="#electronics">Shop deals in Electronics</a>
+    </nav>
+  </header>
 
-    <div class="hero_section">
-        <div id="id22">
-            <div id="id23">You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.</div>
-            <a id="id24" href="https://amazon.in" target="_main"> Click here to go to amazon.in</a>
-        </div>
+  <main id="top">
+    <section class="hero_section" aria-label="Featured promotion">
+      <div id="id22"><span id="id23">You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.</span><a id="id24" href="https://amazon.in" target="_blank" rel="noopener noreferrer">Shop on Amazon India</a></div>
+    </section>
+
+    <section class="content" id="categories" aria-label="Featured categories">
+      <article class="product"><h2>Gaming accessories</h2><div class="image" id="id25" role="img" aria-label="Gaming accessories"></div><a href="#gaming">See more</a></article>
+      <article class="product"><h2>Deals in PCs</h2><div class="image" id="id26" role="img" aria-label="Desktop PC"></div><a href="#pcs">Shop now</a></article>
+      <article class="product"><h2>Gifts for every Mom</h2><div class="image" id="id27" role="img" aria-label="Gift ideas for Mom"></div><a href="#gifts">See more</a></article>
+      <article class="product"><h2>Beauty steals under $25</h2><div class="items">
+        <div class="gap"><div class="smallimg" id="id28" role="img" aria-label="Makeup"></div><small>Makeup</small></div>
+        <div class="gap"><div class="smallimg" id="id29" role="img" aria-label="Pants"></div><small>Pants</small></div>
+      </div><div class="items">
+        <div class="gap"><div class="smallimg" id="id30" role="img" aria-label="T-shirts"></div><small>T-shirts</small></div>
+        <div class="gap"><div class="smallimg" id="id31" role="img" aria-label="Nightwear"></div><small>Nightwear</small></div>
+      </div><a href="#beauty">Shop now</a></article>
+    </section>
+
+    <section class="content down" aria-label="More shopping categories">
+      <article class="product"><h2>Wireless earbuds</h2><div class="image" id="id32" role="img" aria-label="Wireless earbuds"></div><a href="#audio">Shop now</a></article>
+      <article class="product"><h2>Snacks for every day</h2><div class="image" id="id33" role="img" aria-label="Snack selection"></div><a href="#snacks">See more</a></article>
+      <article class="product"><h2>Kitchen essentials</h2><div class="image" id="id34" role="img" aria-label="Kitchen utensils"></div><a href="#kitchen">See more</a></article>
+      <article class="product"><h2>Study &amp; work essentials</h2><div class="items">
+        <div class="gap"><div class="smallimg" id="id35" role="img" aria-label="Laptop"></div><small>Laptops</small></div>
+        <div class="gap"><div class="smallimg" id="id36" role="img" aria-label="Computer mouse"></div><small>Mouse</small></div>
+      </div><div class="items">
+        <div class="gap"><div class="smallimg" id="id37" role="img" aria-label="Keyboard"></div><small>Keyboards</small></div>
+        <div class="gap"><div class="smallimg" id="id38" role="img" aria-label="Pens"></div><small>Pens</small></div>
+      </div><a href="#stationery">Shop now</a></article>
+    </section>
+
+    <section class="sign" aria-label="Sign in recommendations"><p id="id39">See personalized recommendations</p><button type="button">Sign in</button><p id="id40">New customer? <a href="#signup">Start here.</a></p></section>
+  </main>
+
+  <footer id="footer">
+    <a id="id41" href="#top"><p>Back to top</p></a>
+    <div class="all_in_one">
+      <section><h2>Get to know us</h2><ul><li><a href="#careers">Careers</a></li><li><a href="#blog">Blog</a></li><li><a href="#about">About Amazon</a></li><li><a href="#investors">Investor Relations</a></li><li><a href="#devices">Amazon Devices</a></li><li><a href="#science">Amazon Science</a></li></ul></section>
+      <section><h2>Make money with us</h2><ul><li><a href="#sell-products">Sell products on Amazon</a></li><li><a href="#business">Sell on Amazon Business</a></li><li><a href="#apps">Sell apps on Amazon</a></li><li><a href="#affiliate">Become an affiliate</a></li><li><a href="#advertise">Advertise your products</a></li><li><a href="#publish">Self-publish with us</a></li><li><a href="#hub">Host an Amazon Hub</a></li></ul></section>
+      <section><h2>Amazon Payment Products</h2><ul><li><a href="#card">Amazon Business Card</a></li><li><a href="#points">Shop with points</a></li><li><a href="#balance">Reload your balance</a></li><li><a href="#currency">Currency converter</a></li></ul></section>
+      <section id="help"><h2>Let us help you</h2><ul><li><a href="#covid">Amazon and COVID-19</a></li><li><a href="#account">Your account</a></li><li><a href="#orders">Your orders</a></li><li><a href="#shipping">Shipping rates and policies</a></li><li><a href="#returns">Returns and replacements</a></li><li><a href="#devices-content">Manage your content and devices</a></li><li><a href="#assistant">Amazon Assistant</a></li><li><a href="#help-center">Help</a></li></ul></section>
     </div>
-
-    <div class="content">
-        <div class='product'>
-            <p>Gaming accessories</p>
-            <div class="image" id="id25"></div>
-            <a href="#">See more</a>
-        </div>
-        <div class='product'>
-            <p>Deals in PCs</p>
-            <div class="image" id="id26"></div>
-            <a href="#">Shop now</a>
-        </div>
-        <div class='product'>
-            <p>Gifts for every Mom</p>
-            <div class="image" id="id27"></div>
-            <a href="#">See more</a>
-        </div>
-        <div class='product'>
-            <p>Beauty steals under $25</p>
-            <div class="items">
-                <div class="gap">
-                    <div class="smallimg" id="id28"></div>
-                    <small>Makeup</small>
-                </div>
-                <div class="gap">
-                    <div class="smallimg" id="id29"></div>
-                    <small>Phants</small>
-                </div>
-            </div>
-            <div class="items">
-                <div class="gap">
-                    <div class="smallimg" id="id30"></div>
-                    <small>T-shirts</small>
-                </div>
-                <div class="gap">
-                    <div class="smallimg" id="id31"></div>
-                    <small>Night Dress</small>
-                </div>
-            </div>
-            <a href="#">Shop now</a>
-        </div>
-    </div>
-
-    <div class="content down">
-        <div class='product'>
-            <p>Air Pods</p>
-            <div class="image" id="id32"></div>
-            <a href="#">Shop now</a>
-        </div>
-        <div class='product'>
-            <p>Evening Snacks</p>
-            <div class="image" id="id33"></div>
-            <a href="#">See more</a>
-        </div>
-        <div class='product'>
-            <p>Kitchen Items</p>
-            <div class="image" id="id34"></div>
-            <a href="#">See more</a>
-        </div>
-        <div class='product'>
-            <p>Stationary shop</p>
-            <div class="items">
-                <div class="gap">
-                    <div class="smallimg" id="id35"></div>
-                    <small>laptops</small>
-                </div>
-                <div class="gap">
-                    <div class="smallimg" id="id36"></div>
-                    <small>Mouse</small>
-                </div>
-            </div>
-            <div class="items">
-                <div class="gap">
-                    <div class="smallimg" id="id37"></div>
-                    <small>Key Boards</small>
-                </div>
-                <div class="gap">
-                    <div class="smallimg" id="id38"></div>
-                    <small>Pens</small>
-                </div>
-            </div>
-            <a href="#">Shop now</a>
-        </div>
-    </div>
-
-    <footer>
-        <div class="sign">
-            <p id="id39">see personalized recommendations</p>
-            <button>Sign in</button>
-            <p id="id40">New Costumer?<a href="#">Start here.</a></p>
-        </div>
-
-        <div id="id41">
-            <p>Back to top</p>
-        </div>
-
-        <div class="all_in_one">
-            <div>
-                <p>Get to know us</p>
-                <ul>
-                    <li>Careers</li>
-                    <li>Blog</li>
-                    <li>About amazon</li>
-                    <li>Investor Relations</li>
-                    <li>Amazon Devices</li>
-                    <li>Amazon Science</li>
-                </ul>
-            </div>
-
-            <div>
-                <p>Make money with us</p>
-                <ul>
-                    <li>Sell Products on Amazon</li>
-                    <li>Sell on Amazon Buisness</li>
-                    <li>Sell Apps on Amazon</li>
-                    <li>Become an Affiliate</li>
-                    <li>Advertize your Products</li>
-                    <li>Self-Publish With us</li>
-                    <li>Host on Amazon Hub</li>
-                    <li>See more money making with us</li>
-                </ul>
-            </div>
-
-            <div>
-                <p>Amazon Payment Products</p>
-                <ul>
-                    <li>Amazon Buisness Card</li>
-                    <li>Shop with points</li>
-                    <li>Reload your Balance</li>
-                    <li>Amazon Currency Convertor</li>
-                </ul>
-            </div>
-
-            <div>
-                <p>Let us Help You</p>
-                <ul>
-                    <li>Amazon and Covid-19</li>
-                    <li>Your Account</li>
-                    <li>Your Orders</li>
-                    <li>Shipping rates and policies</li>
-                    <li>Retuen and Replacements</li>
-                    <li>Manage your Content and devices</li>
-                    <li>Amazon Assistant</li>
-                    <li>Help</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="usman">
-            <div id="id42"></div>
-            <div id="id43">
-                <p><i class="fa-solid fa-globe"></i>English</p>
-            </div>
-            <div id="id44">
-                <p><i class="fa-solid fa-dollar-sign"></i>USD - U.S Dollar</p>
-            </div>
-            <div id="id45">
-                <p><i class="fa-solid fa-flag-usa"></i> United States</p>
-            </div>
-        </div>
-
-        <div class="end">
-            <p>Conditions of Use</p>
-            <p>Privacy Notice</p>
-            <p>Consumer Health data privacy Disclosure</p>
-            <p>Your Ads privacy choices</p>
-        </div>
-        
-        <div class="last">
-            <i class="fa-regular fa-copyright"></i>
-            <p>1996-2024, Amazon.com, Inc. or its affilitates</p>
-        </div>
-    </footer>
+    <div class="usman"><div id="id42" role="img" aria-label="Amazon"></div><div id="id43"><i class="fa-solid fa-globe" aria-hidden="true"></i> English</div><div id="id44"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i> USD - U.S. Dollar</div><div id="id45"><i class="fa-solid fa-flag-usa" aria-hidden="true"></i> United States</div></div>
+    <div class="end"><a href="#terms">Conditions of Use</a><a href="#privacy">Privacy Notice</a><a href="#health-privacy">Consumer Health Data Privacy Disclosure</a><a href="#ads">Your Ads Privacy Choices</a></div>
+    <div class="last"><i class="fa-regular fa-copyright" aria-hidden="true"></i><p>1996–2024, Amazon.com, Inc. or its affiliates</p></div>
+  </footer>
 </body>
 </html>
